@@ -10,6 +10,11 @@
 	<!-- add entry to enable component scanning -->
 	<context:component-scan
 		base-package="com.java.springdemo" />
+	<bean id="myLoggerConfig"
+		class="com.java.springdemo.MyLoggerConfig" init-method="initLogger">
+		<property name="rootLoggerLevel" value="FINE" />
+		<property name="printedLoggerLevel" value="FINE" />
+	</bean>
 </beans>
 
 
