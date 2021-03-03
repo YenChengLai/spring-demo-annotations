@@ -8,14 +8,27 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 
-	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
-	}
+	// constructor injection
+//	@Autowired
+//	public TennisCoach(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
 
 	@Override
 	public String getDailyWorkout() {
 		return "practice back hand volley";
+	}
+
+	// setter injection
+//	@Autowired
+//	public void setFortuneService(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
+	
+	// method injection
+	@Autowired
+	public void addFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
 	}
 
 	@Override
